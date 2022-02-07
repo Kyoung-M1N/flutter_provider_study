@@ -4,9 +4,11 @@ import 'pages/home.dart';
 import 'src/providers/value_provider.dart';
 
 void main() {
-  runApp(
+  runApp(MultiProvider(
+    providers: [
     ChangeNotifierProvider(
-      create: (context) => Value(),
+      create: (context) => Value()),
+      ],
       child: const MyApp(),
     ),
   );
